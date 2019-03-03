@@ -77,22 +77,13 @@ class singleLinkedList:
 
 def main():
     print("Hello! This is a linked list demo")
-    node1 = Listnode(input("Enter the first value:"))
-    node2 = Listnode(input("Enter the second value"))
-    node3 = Listnode(input("Enter the 3 value:"))
-    node4 = Listnode(input("Enter the 4 value"))
-    node5 = Listnode(input("Enter the 5 value:"))
-    node6 = Listnode(input("Enter the 6 value"))
-
+    num=input("Enter the number of nodes you wish to add")
     thelist = singleLinkedList()
-    thelist.add_list_item(node1)
-    thelist.add_list_item(node2)
-    thelist.add_list_item(node3)
-    thelist.add_list_item(node4)
-    thelist.add_list_item(node5)
-    thelist.add_list_item(node6)
-    print("Value of node 1 and node 2",node1.data,node2.data)
-    print("Node IDS are",node1.node_id,node2.node_id)
+    i = 0
+    while i < num:
+         thelist.add_list_item(Listnode(input("Enter Value:")))
+         i = i + 1
+
     print("The size of the list is: ",thelist.list_count())
 
     thelist.view_all_elements()
